@@ -1,0 +1,3 @@
+[submodule "RPi/raspberry-pi-mqtt"]
+	path = RPi/raspberry-pi-mqtt
+	url = https://github.com/OpenSensorsIO/raspberry-pi-mqtt.git
