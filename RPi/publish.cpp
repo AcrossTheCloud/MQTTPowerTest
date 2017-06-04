@@ -18,6 +18,6 @@ void main()
   while(true) {
     result = client->publish("topic/rpi", "connected");
     cout << (result == OSIO_ERROR_SUCCESS ? "success" : "error") << endl;
-    usleep(1000);
+    usleep(15*60*1000);
   }
 }

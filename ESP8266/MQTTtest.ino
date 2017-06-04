@@ -50,6 +50,6 @@ void loop()
   if (!client.connected()) {
     reconnect();
   }
-  delay(1000);
+  delay(15*60*1000);
   client.publish("topic/esp8266", "connected");
 }
