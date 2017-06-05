@@ -11,14 +11,14 @@ RaspberryOSIOClient * client = 0;
 int main()
 {
   // Our raspberry MQTT client instance.
-  client = new RaspberryOSIOClient("username", "deviceid", "7s4ZHOQJ");
+  client = new RaspberryOSIOClient((char *) "username", (char *) "deviceid", (char *) "7s4ZHOQJ", "10.8.239.81");
 
   cout << "Client started." << endl;
   cout << "Publishing messages: ";
   while(true) {
-    result = client->publish("topic/rpi", "connected");
+    bool result = client->publish((char *) "topic/rpi", (char *) "connected");
     cout << (result == OSIO_ERROR_SUCCESS ? "success" : "error") << endl;
-    usleep(15*60*1000);
+    sleep(30);
   }
   return 0;
 }
