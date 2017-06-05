@@ -8,7 +8,7 @@ using namespace std;
 RaspberryOSIOClient * client = 0;
 
 
-void main()
+int main()
 {
   // Our raspberry MQTT client instance.
   client = new RaspberryOSIOClient("username", "deviceid", "7s4ZHOQJ");
@@ -20,4 +20,5 @@ void main()
     cout << (result == OSIO_ERROR_SUCCESS ? "success" : "error") << endl;
     usleep(15*60*1000);
   }
+  return 0;
 }
