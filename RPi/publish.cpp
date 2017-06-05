@@ -11,7 +11,7 @@ RaspberryOSIOClient * client = 0;
 int main()
 {
   // Our raspberry MQTT client instance.
-  client = new RaspberryOSIOClient((char *) "username", (char *) "deviceid", (char *) "7s4ZHOQJ", "10.8.239.81");
+  client = new RaspberryOSIOClient((char *) "username", (char *) "deviceid", (char *) "7s4ZHOQJ", (char *) "server_host");
 
   cout << "Client started." << endl;
   cout << "Publishing messages: ";
